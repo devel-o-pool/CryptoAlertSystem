@@ -15,9 +15,10 @@ using System.Web;
 
 namespace CryptoCurrencyApp
 {
+    //auto-generated class for handling events
     public partial class CryptoCurrency2 : UserControl
     {
-
+        //String values for the urls of each cryptocurrency 
         private String BTCUrl = "https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC&tsyms=USD";
         private String ETHUrl = "https://min-api.cryptocompare.com/data/pricemulti?fsyms=ETH&tsyms=USD";
         private String LTCUrl = "https://min-api.cryptocompare.com/data/pricemulti?fsyms=LTC&tsyms=USD";
@@ -25,6 +26,8 @@ namespace CryptoCurrencyApp
         private String ZECUrl = "https://min-api.cryptocompare.com/data/pricemulti?fsyms=ZEC&tsyms=USD";
 
         private Thread cryptoCurrency2Thread;
+
+        //Values for storing the data retrieved from the API
         private double currency = 0;
         private String currencyURL = "";
         private double high = 0;
@@ -38,20 +41,25 @@ namespace CryptoCurrencyApp
         public CryptoCurrency2()
         {
             InitializeComponent();
+
+            //Initialize each tab with a default cryptocurrency
             currencyURL = ETHUrl;
         }
 
+        //Retreives data from the API, with the help of a loop
         private void getRLTData()
         {
 
             while (true)
             {
 
-
+                //uses Newtonsoft.JSON framework to serialize the data
                 var currency2Rates = _download_serialized_json_data<JSONStructure>(currencyURL);
 
+                //get the current value of the cryptocurrency
                 try
                 {
+                    //changes the url depending upon the currency that the user has picked
                     if (currencyURL==ETHUrl)
                         currency = currency2Rates.ETH.USD;
                     else if (currencyURL == BTCUrl)
@@ -71,16 +79,14 @@ namespace CryptoCurrencyApp
                         continue;
                 }
 
+                //verifies that the thread exists
                 if (cryptoCurrency2Chart.IsHandleCreated)
                 {
+                    //invokes the UpdateChart method
                     this.Invoke((MethodInvoker)delegate { UpdateChart(); });
                 }
 
-                else
-                {
-
-                }
-
+                //Pauses the loop for 10 seconds
                 Thread.Sleep(10000);
 
             }
@@ -127,6 +133,7 @@ namespace CryptoCurrencyApp
 
         }
 
+        //get the JSON data
         private static T _download_serialized_json_data<T>(string url) where T : new()
         {
             using (WebClient w = new WebClient())
@@ -144,6 +151,7 @@ namespace CryptoCurrencyApp
             }
         }
 
+        //Button to start the program or refresh the program (when refreshed, the graph is cleared)
         private void refreshCurrency_Click(object sender, EventArgs e)
         {
             cryptoCurrency2Chart.Series["Series1"].Points.Clear();
@@ -153,20 +161,25 @@ namespace CryptoCurrencyApp
             refreshCurrency.Text = "Refresh";
         }
 
+        //first trading rule
         private void setUserHigh_Click(object sender, EventArgs e)
         {
             userHigh = Double.Parse (getUserHigh.Text);
         }
 
+        //second trading rule
         private void setUserLow_Click(object sender, EventArgs e)
         {
             userLow = Double.Parse(getUserLow.Text);
         }
 
+        //radio buttons used to cycle between currencies
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
+            //when user picks a new currency
             if (radioButton1.Checked)
             {
+                //uses the url for the new currency, and refreshes the program
                 currencyURL = BTCUrl;
                 label1.Text = "BTC";
                 refreshCurrency.PerformClick();

@@ -14,8 +14,10 @@ using System.Threading;
 
 namespace CryptoCurrencyApp
 {
+    //auto-generated class for handling events
     public partial class CryptoCurrency1 : UserControl
     {
+        //String values for the urls of each cryptocurrency 
         private String BTCUrl = "https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC&tsyms=USD";
         private String ETHUrl = "https://min-api.cryptocompare.com/data/pricemulti?fsyms=ETH&tsyms=USD";
         private String LTCUrl = "https://min-api.cryptocompare.com/data/pricemulti?fsyms=LTC&tsyms=USD";
@@ -23,6 +25,8 @@ namespace CryptoCurrencyApp
         private String ZECUrl = "https://min-api.cryptocompare.com/data/pricemulti?fsyms=ZEC&tsyms=USD";
 
         private Thread cryptoCurrency1Thread;
+
+        //Values for storing the data retrieved from the API
         private double currency = 0;
         private String currencyURL = "";
         private double high = 0;
@@ -36,22 +40,24 @@ namespace CryptoCurrencyApp
         public CryptoCurrency1()
         {
             InitializeComponent();
+
+            //Initialize each tab with a default cryptocurrency
             currencyURL = BTCUrl;
         }
 
-
+        //Retreives data from the API, with the help of a loop
         private void getRLTData()
         {
 
             while (true)
             {
 
-
+                //uses Newtonsoft.JSON framework to serialize the data
                 var currency1Rates = _download_serialized_json_data<JSONStructure>(currencyURL);
 
                 try
                 {
-
+                    //get the current value for the cryptocurrency
                     currency = currency1Rates.BTC.USD;
                     
                 }
