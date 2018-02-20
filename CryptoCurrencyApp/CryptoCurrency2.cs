@@ -155,6 +155,8 @@ namespace CryptoCurrencyApp
         private void refreshCurrency_Click(object sender, EventArgs e)
         {
             cryptoCurrency2Chart.Series["Series1"].Points.Clear();
+            if (cryptoCurrency2Thread!=null)
+                cryptoCurrency2Thread.Abort();
             cryptoCurrency2Thread = new Thread(new ThreadStart(this.getRLTData));
             cryptoCurrency2Thread.IsBackground = true;
             cryptoCurrency2Thread.Start();

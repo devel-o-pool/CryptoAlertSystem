@@ -12,3 +12,16 @@ C:\Users\as110\source\repos\CryptoCurrencyApp\CryptoCurrencyApp\obj\Debug\Crypto
 C:\Users\as110\source\repos\CryptoCurrencyApp\CryptoCurrencyApp\obj\Debug\CryptoCurrencyApp.CryptoCurrency2.resources
 C:\Users\as110\source\repos\CryptoCurrencyApp\CryptoCurrencyApp\obj\Debug\CryptoCurrencyApp.Dashboard.resources
 C:\Users\as110\source\repos\CryptoCurrencyApp\CryptoCurrencyApp\obj\Debug\CryptoCurrencyApp.csprojResolveAssemblyReference.cache
+C:\Users\as110\Source\Repos\CryptoAlertSystem2\CryptoCurrencyApp\bin\Debug\CryptoCurrencyApp.exe.config
+C:\Users\as110\Source\Repos\CryptoAlertSystem2\CryptoCurrencyApp\bin\Debug\CryptoCurrencyApp.exe
+C:\Users\as110\Source\Repos\CryptoAlertSystem2\CryptoCurrencyApp\bin\Debug\CryptoCurrencyApp.pdb
+C:\Users\as110\Source\Repos\CryptoAlertSystem2\CryptoCurrencyApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\as110\Source\Repos\CryptoAlertSystem2\CryptoCurrencyApp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\as110\Source\Repos\CryptoAlertSystem2\CryptoCurrencyApp\obj\Debug\CryptoCurrencyApp.CryptoCurrency1.resources
+C:\Users\as110\Source\Repos\CryptoAlertSystem2\CryptoCurrencyApp\obj\Debug\CryptoCurrencyApp.CryptoCurrency2.resources
+C:\Users\as110\Source\Repos\CryptoAlertSystem2\CryptoCurrencyApp\obj\Debug\CryptoCurrencyApp.Dashboard.resources
+C:\Users\as110\Source\Repos\CryptoAlertSystem2\CryptoCurrencyApp\obj\Debug\CryptoCurrencyApp.Properties.Resources.resources
+C:\Users\as110\Source\Repos\CryptoAlertSystem2\CryptoCurrencyApp\obj\Debug\CryptoCurrencyApp.csproj.GenerateResource.Cache
+C:\Users\as110\Source\Repos\CryptoAlertSystem2\CryptoCurrencyApp\obj\Debug\CryptoCurrencyApp.csproj.CoreCompileInputs.cache
+C:\Users\as110\Source\Repos\CryptoAlertSystem2\CryptoCurrencyApp\obj\Debug\CryptoCurrencyApp.exe
+C:\Users\as110\Source\Repos\CryptoAlertSystem2\CryptoCurrencyApp\obj\Debug\CryptoCurrencyApp.pdb
